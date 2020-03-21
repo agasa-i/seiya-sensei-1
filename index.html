@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Seiya Sensei 1 playground</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div id="navDrawer">
+          <input id="navInput" type="checkbox" class="navUnshown" />
+          <label id="navOpen" for="navInput"><span></span></label>
+          <label class="navUnshown" id="navClose" for="navInput"></label>
+          <div id="navContents">
+            <ul>
+              <li><a href="#topWrapper">Top</a></li>
+              <li><a href="#">Works</a></li>
+              <li><a href="#contactWrapper">Contact</a></li>
+              <li class="additionalItems firstChild">Web design</li>
+              <li class="additionalItems">Logo design</li>
+              <li class="additionalItems">Photo</li>
+              <li class="additionalItems">More about Me</li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div id="topWrapper">
+      <div class="container">
+        <h2>Hello, I'm Seiya!</h2>
+      </div>
+    </div>
+    <div id="contentsWrapper">
+      <div class="container">
+        <section>
+          <div class="heading">What I can do...</div>
+          <div class="flex">
+            <div class="content">
+              <h3>Design</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+                enim deserunt impedit quas placeat harum totam quis nam error,
+                optio omnis ut quia, modi eligendi sapiente eaque alias ipsum
+                eveniet! Lorem ipsum dolor.
+              </p>
+            </div>
+            <div class="content">
+              <h3>Coding</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Perferendis assumenda mollitia a illum aspernatur perspiciatis
+                dolor voluptatibus voluptatum. Officiis suscipit voluptatum
+                doloremque atque architecto!
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <div id="worksWrapper">
+      <div class="container">
+        <section>
+          <div class="heading centerHeading">My recent works</div>
+          <ol class="flex">
+            <li>
+              <a href="#">
+                <img src="images/dummy1.png" alt="" />
+                <div>
+                  <h4>Project</h4>
+                  <p>
+                    Lorem nisicing elit. Commodi repudiandae impedit eum
+                    excepturi s unde exercitationem dolor dicta similique,
+                    reprehenderit ab. Lorem ipsum, dolor sit amet consectetur
+                    adipisicing elit. Ullam numquam veritatis porro?
+                    Necessitatibus, vel? Similique natus illum nulla praesentium
+                    eos, quas expedita reiciendis adipisci? Commodi, fugiat
+                    maxime.
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="images/dummy1.png" alt="" />
+                <div>
+                  <h4>Project</h4>
+                  <p>
+                    Lorem ipsum dipisicing elit. Eaque alias iusto enim quia
+                    veritatis Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit. Dolores dolore praesentium officiis, culpa perferendis
+                    ipsa qui odio cum molestias assumenda corrupti doloribus
+                    repellat, quibusdam eveniet porro eligendi facere ullam,
+                    totam praesentium, Aliquid!
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="images/dummy1.png" alt="" />
+                <div>
+                  <h4>Project</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Libero reiciendis eaque expedita quibusdam quos id!
+                    voluptatum explicabo. Lorem ipsum, dolor sit amet
+                    consectetur adipisicing elit. Quae dolore quisquam voluptate
+                    quas adipisci! Illum ipsam tempora totam ullam sit
+                    voluptatem asperiores expedita velit.
+                  </p>
+                </div>
+              </a>
+            </li>
+          </ol>
+          <div class="more">
+            <a href="#">SEE MY OTHER WORKS</a>
+          </div>
+        </section>
+      </div>
+    </div>
+    <div id="contactWrapper">
+      <div class="container">
+        <section class="formSection">
+          <div class="heading centerHeading">
+            Would you like to work with me?
+          </div>
+          <form action="" method="POST">
+            <label for="name"></label>
+            <input
+              class="textBox infoBox"
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Name"
+            />
+            <label for="email"></label>
+            <input
+              class="textBox infoBox"
+              type="mail"
+              id="email"
+              name="email"
+              placeholder="E-mail"
+            />
+            <p>I'll never share your email.</p>
+            <label for="message"></label>
+            <textarea
+              class="textBox"
+              name="message"
+              id="message"
+              placeholder="How would you like to work with me?"
+            ></textarea>
+            <a href="#">
+              <input type="submit" value="SUBMIT" /><img
+                src="images/send-24px.svg"
+                alt=""
+              />
+            </a>
+          </form>
+        </section>
+      </div>
+    </div>
+    <footer>
+      <p>(c)seiyamurayama.com</p>
+    </footer>
+  </body>
+</html>

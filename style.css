@@ -1,0 +1,522 @@
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+  color: #222;
+}
+
+body * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+#contentsWrapper {
+  background-color: #eee;
+}
+
+#worksWrapper {
+  background-color: #ddd;
+}
+
+#contactWrapper {
+  background-color: #eee;
+}
+
+nav {
+  width: 100vw;
+  position: fixed;
+}
+
+nav #navDrawer {
+  position: relative;
+}
+
+nav #navDrawer .navUnshown {
+  display: none;
+}
+
+nav #navDrawer #navContents {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -100vw;
+  width: 30%;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+nav #navDrawer #navContents ul {
+  height: 100vh;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+nav #navDrawer #navContents ul li {
+  width: 100%;
+}
+
+nav #navDrawer #navContents ul li a {
+  display: block;
+  padding: 2em 1.5em;
+  text-decoration: none;
+}
+
+nav #navDrawer #navContents ul li a:hover {
+  background: #cddc39;
+  opacity: 0.8;
+}
+
+nav #navDrawer #navContents ul li:hover {
+  color: #555;
+}
+
+nav #navDrawer #navContents ul .additionalItems {
+  color: #888;
+  padding: 2em 1.5em;
+}
+
+nav #navDrawer #navContents ul .firstChild {
+  border-top: 1px solid #ccc;
+}
+
+nav #navDrawer #navOpen {
+  display: inline-block;
+  width: 30px;
+  height: 22px;
+  vertical-align: middle;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+nav #navDrawer #navOpen span,
+nav #navDrawer #navOpen span::before,
+nav #navDrawer #navOpen span::after {
+  position: absolute;
+  height: 3px;
+  width: 30px;
+  border-radius: 3px;
+  background: #555;
+  display: block;
+  content: "";
+  cursor: pointer;
+}
+
+nav #navDrawer #navOpen span:before {
+  bottom: -8px;
+}
+
+nav #navDrawer #navOpen span:after {
+  bottom: -16px;
+}
+
+nav #navDrawer #navClose {
+  display: block;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  left: -100vw;
+  top: 0;
+  background: rgba(0, 0, 0, 0.3);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+nav #navDrawer #navInput:checked ~ #navClose {
+  left: 0;
+}
+
+nav #navDrawer #navInput:checked ~ #navContents {
+  left: 0;
+}
+
+.container {
+  width: 75%;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container h2 {
+  font-size: 600%;
+  text-align: center;
+  line-height: 100vh;
+  font-weight: 200;
+}
+
+.container .heading {
+  font-size: 200%;
+  font-weight: 200;
+}
+
+.container .centerHeading {
+  text-align: center;
+  padding-bottom: 1em;
+}
+
+.container .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .flex .content {
+  width: 48%;
+}
+
+.container .flex .content h3 {
+  font-size: 250%;
+  font-weight: 200;
+  padding: 0.8em 0;
+}
+
+.container .flex .content p {
+  line-height: 1.5em;
+}
+
+.container .flex > li {
+  width: 31%;
+  list-style: none;
+  background-color: #fff;
+  border-radius: 4px;
+  -webkit-box-shadow: 1px 2px 2px #aaa;
+          box-shadow: 1px 2px 2px #aaa;
+}
+
+.container .flex > li > a {
+  text-decoration: none;
+}
+
+.container .flex > li > a img {
+  width: 100%;
+  height: 120px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px 5px 0 0;
+}
+
+.container .flex > li > a > div {
+  padding: 0.8em;
+  color: #888;
+}
+
+.container .flex > li > a > div p {
+  font-size: 90%;
+  line-height: 1.3em;
+  overflow: hidden;
+  height: 7.5em;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.container .flex > li h4 {
+  padding-bottom: 0.8em;
+  color: #333;
+  font-size: 400;
+}
+
+.container .more {
+  text-align: center;
+  margin: 2.5em;
+}
+
+.container .more > a {
+  background-color: #cddc39;
+  padding: 0.8em;
+  text-decoration: none;
+  font-size: 90%;
+  font-weight: 500;
+  border-radius: 4px;
+  -webkit-box-shadow: 1px 2px 2px #aaa;
+          box-shadow: 1px 2px 2px #aaa;
+  color: #333;
+}
+
+.container .formSection {
+  width: 60%;
+}
+
+.container .formSection form {
+  background-color: #fff;
+  border-radius: 3px;
+  -webkit-box-shadow: 1px 2px 2px #aaa;
+          box-shadow: 1px 2px 2px #aaa;
+  padding: 0.5em 1em;
+}
+
+.container .formSection form p {
+  color: #ccc;
+  font-size: 20%;
+}
+
+.container .formSection form .infoBox {
+  border: none;
+  border-bottom: solid 1px #999;
+  height: 3em;
+  margin: 0.5em 0;
+}
+
+.container .formSection form .infoBox:focus {
+  border-bottom: 1px solid #cddc39;
+  color: #cddc39;
+  outline: none;
+}
+
+.container .formSection form .textBox {
+  width: 100%;
+}
+
+.container .formSection form textarea {
+  border-color: #999;
+  height: 12em;
+  padding: 1em;
+  margin: 1.5em 0 1em 0;
+  border-radius: 4px;
+}
+
+.container .formSection form textarea:focus {
+  border: 1px solid #cddc39;
+  color: #cddc39;
+  border-radius: 4px;
+  outline: none;
+}
+
+.container .formSection form > a {
+  background-color: #cddc39;
+  display: block;
+  text-align: center;
+  line-height: 2em;
+  border-radius: 3px;
+}
+
+.container .formSection form > a > input {
+  background-color: #cddc39;
+  border-color: #cddc39;
+}
+
+.container .formSection form > a img {
+  vertical-align: middle;
+  width: 1.2em;
+}
+
+footer {
+  background-color: #666;
+}
+
+footer p {
+  color: #eee;
+  padding: 1em;
+  text-align: center;
+}
+
+@media (max-width: 1023px) {
+  #worksWrapper {
+    padding: 15% 0;
+  }
+  nav #navDrawer #navContents {
+    width: 45%;
+  }
+  .container {
+    width: 100%;
+  }
+  .container h2 {
+    line-height: 100%;
+  }
+  .container section {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .container .flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container .flex .content {
+    width: 100%;
+  }
+  .container .flex li {
+    width: 100%;
+    margin: 5% 0;
+  }
+  .container .formSection {
+    width: 90%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
