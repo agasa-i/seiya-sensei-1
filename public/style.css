@@ -467,7 +467,7 @@ nav #navDrawer #navInput:checked ~ #navContents {
 
 .container .formSection form > a > input {
   background-color: #cddc39;
-  border-color: #cddc39;
+  border: none;
 }
 
 .container .formSection form > a img {
