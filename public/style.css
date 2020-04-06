@@ -223,6 +223,7 @@ nav #navDrawer #navContents ul li a {
   display: block;
   padding: 2em 1.5em;
   text-decoration: none;
+  color: #666;
 }
 
 nav #navDrawer #navContents ul li a:hover {
@@ -393,19 +394,53 @@ nav #navDrawer #navInput:checked ~ #navContents {
 
 .container .more {
   text-align: center;
-  margin: 2.5em;
-}
-
-.container .more > a {
+  margin: 2.5em auto;
+  max-width: 250px;
+  height: 3em;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
   background-color: #cddc39;
-  padding: 0.8em;
-  text-decoration: none;
-  font-size: 90%;
-  font-weight: 500;
   border-radius: 4px;
   -webkit-box-shadow: 1px 2px 2px #aaa;
           box-shadow: 1px 2px 2px #aaa;
+}
+
+.container .more:hover .btnSkew {
+  left: -20px;
+}
+
+.container .more:hover a {
+  color: #f7f7f7;
+}
+
+.container .more a {
+  width: 100%;
+  line-height: 3em;
+  text-decoration: none;
+  font-weight: 500;
   color: #333;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -webkit-transform: skewX(20deg);
+          transform: skewX(20deg);
+  z-index: 2;
+  position: relative;
+}
+
+.container .more .btnSkew {
+  background: rgba(205, 220, 150, 0.7);
+  position: absolute;
+  width: 300px;
+  height: 3em;
+  left: -320px;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -webkit-transform: skewX(20deg);
+          transform: skewX(20deg);
+  z-index: 1;
 }
 
 .container .formSection {
@@ -463,6 +498,7 @@ nav #navDrawer #navInput:checked ~ #navContents {
   text-align: center;
   line-height: 2em;
   border-radius: 3px;
+  cursor: pointer;
 }
 
 .container .formSection form > a > input {

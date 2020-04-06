@@ -170,6 +170,13 @@ select {
 
 ///////////////////////////////////////////////////////////////////////
 
+// :root {
+//   --primary-color: #400;
+// }
+// * {
+//   box-sizing: border-box;
+// }
+
 $font-weight_light: 200;
 $colorYellow: #cddc39;
 $radius: 4px;
@@ -210,11 +217,16 @@ nav {
             display: block;
             padding: 2em 1.5em;
             text-decoration: none;
+            color: #666;
           }
           a:hover {
             background: $colorYellow;
             opacity: 0.8;
           }
+          // a:visited {
+          //   color: #00f;
+          //   text-decoration: none;
+          // }
         }
         li:hover {
           color: #555;
@@ -346,16 +358,47 @@ nav {
   }
   .more {
     text-align: center;
-    margin: 2.5em;
-    > a {
-      background-color: $colorYellow;
-      padding: 0.8em;
+    margin: 2.5em auto;
+    max-width: 250px;
+    height: 3em;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    background-color: $colorYellow;
+    border-radius: $radius;
+    box-shadow: $shadow;
+    &:hover {
+      .btnSkew {
+        left: -20px;
+      }
+      a {
+        color: #f7f7f7;
+      }
+    }
+    a {
+      width: 100%;
+      line-height: 3em;
       text-decoration: none;
-      font-size: 90%;
       font-weight: 500;
-      border-radius: $radius;
-      box-shadow: $shadow;
       color: #333;
+      transition: all 0.3s ease;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      transform: skewX(20deg);
+      z-index: 2;
+      position: relative;
+    }
+    .btnSkew {
+      background: rgba(205, 220, 150, 0.7);
+      position: absolute;
+      width: 300px;
+      height: 3em;
+      left: -320px;
+      transition: all 0.3s ease;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      transform: skewX(20deg);
+      z-index: 1;
     }
   }
   .formSection {
@@ -402,6 +445,30 @@ nav {
         text-align: center;
         line-height: 2em;
         border-radius: 3px;
+        cursor: pointer;
+        // position: relative;
+        // overflow: hidden;
+        // transition: 0.3s;
+        // &:after {
+        //   position: absolute;
+        //   transition: 0.3s;
+        //   content: "";
+        //   width: 0;
+        //   bottom: 0;
+        //   background: #f7f7f7;
+        //   height: 120%;
+        //   left: -10%;
+        //   transform: skewX(20deg);
+        //   z-index: -1;
+        // }
+        // &:hover {
+        //   cursor: pointer;
+        //   color: #888;
+        //   &:after {
+        //     left: -10%;
+        //     width: 120%;
+        //   }
+        // }
         > input {
           background-color: $colorYellow;
           border: none;
